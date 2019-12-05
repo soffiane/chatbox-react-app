@@ -1,0 +1,27 @@
+/* correspond au moment ou le message est validé */
+.fade-enter{
+    opacity: 0.01;
+    /* transforme le message en plus petit puis le fait glisser vers le bas avant d'arriver et lui rendre sa taille */
+    transform: scale(0.9) translateY(-50%);
+}
+
+/* le message est sur le point d'apparaitre sur le chat */
+.fade-enter-active {
+    opacity: 1;
+    /* transforme le message en plus petit puis le fait glisser vers le haut avant d'arriver */
+    transform: scale(1) translateY(0%);
+    transition: all 500ms ease-in-out;
+}
+
+/* correspond au moment ou le message est supprimé */
+.fade-exit{
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+}
+
+/* le message est sur le point de disparaitre du chat */
+.fade-exit-active {
+    opacity: 0.01;
+    transition: all 500ms ease-in-out;
+    transform: scale(0.9) translateY(-50%);
+}
